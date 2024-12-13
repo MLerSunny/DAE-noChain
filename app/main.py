@@ -11,7 +11,7 @@ import openai
 app = FastAPI()
 
 # connect Ngork
-ngrok.set_auth_token("2q7lY4hsLqAUmUeLUCLSzmFSQT5_5dPnwWYguwS3uETksjwEt")
+ngrok.set_auth_token("Your_Ngrok_Key")
 # Get a list of all active tunnels
 tunnels = ngrok.get_tunnels()
 
@@ -26,7 +26,7 @@ ngrok_tunnel = ngrok.connect(8000)
 print(f"Public URL: {ngrok_tunnel.public_url}")
 
 # Set OpenAI API Key
-YOUR_OPENAI_API_KEY = "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"
+YOUR_OPENAI_API_KEY = "YOUR_OPENAI_API_KEY"
 openai.api_key = "YOUR_OPENAI_API_KEY"
 
 @app.get("/fetch_data/")
