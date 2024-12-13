@@ -1,0 +1,10 @@
+fastapi
+pandas
+requests
+uvicorn
+nest_asyncio
+pyngrok
+openai
+transformers
+python-multipart
+streamlit

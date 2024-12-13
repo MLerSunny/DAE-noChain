@@ -1,0 +1,24 @@
+run = "uvicorn app/main:app --host 0.0.0.0 --port 8000 --reload"
+modules = ["python-3.11"]
+[nix]
+channel = "stable-24_05"
+
+# Optional: Set the language for syntax highlighting
+language = "python3"
+
+# Optional: Specify the package manager
+package_manager = "pip"
+
+# Optional: Specify an installation command to ensure all dependencies are installed
+onBoot = "pip install -r requirements.txt"
+
+YOUR_NGROK_AUTH_TOKEN = "2q7lY4hsLqAUmUeLUCLSzmFSQT5_5dPnwWYguwS3uETksjwEt"
+
+YOUR_OPENAI_API_KEY = "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"
+
+[deployment]
+run = ["sh", "-c", "uvicorn app/main:app --host 0.0.0.0 --port 8000 --reload"]
+
+[[ports]]
+localPort = 8000
+externalPort = 80
